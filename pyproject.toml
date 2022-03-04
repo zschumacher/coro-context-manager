@@ -1,0 +1,73 @@
+[tool.poetry]
+name = "coro-context-manager"
+version = "0.1.0"
+description = "A simple object to wrap couroutines to make them awaitable or used via an asyn context manager"
+authors = ["Zach Schumacher <zachary@simplebet.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0.1"
+pytest-asyncio = "^0.18.2"
+pytest-cov = "^3.0.0"
+mypy = "^0.931"
+black = "^22.1.0"
+isort = "^5.10.1"
+
+[tool.isort]
+force_grid_wrap = 0
+force_single_line = true
+include_trailing_comma = true
+line_length = 120
+multi_line_output = 3
+skip = ["venv", ".venv", "media", "staticfiles"]
+use_parentheses = true
+
+[tool.black]
+line-length = 120
+target-version = ['py37']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.circleci
+    | \.git
+    | \.github
+    | \.hg
+    | \.mypy_cache
+    | \.pytest_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+    | venv
+    | media
+    | staticfiles
+  )/
+)
+'''
+
+[tool.coverage.run]
+omit = [
+    "pydapper/types.py",
+    "tests/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if TYPE_CHECKING:",
+    "raise NotImplementedError",
+    "Protocol",
+    "except ImportError",
+    "@abstractmethod"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
