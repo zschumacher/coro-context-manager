@@ -5,8 +5,7 @@ description = "A simple object to wrap couroutines to make them awaitable or use
 authors = ["Zach Schumacher <zachary@simplebet.io>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-
+python = ">=3.7,<=3.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.1"
@@ -68,6 +67,10 @@ exclude_lines = [
     "@abstractmethod"
 ]
 
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
