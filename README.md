@@ -1,7 +1,10 @@
 [![test](https://github.com/zschumacher/coro-context-manager/actions/workflows/test.yml/badge.svg)](https://github.com/zschumacher/coro-context-manager/actions/workflows/test.yml)
+[![PyPI version](https://badge.fury.io/py/coro-context-manager.svg)](https://badge.fury.io/py/coro-context-manager)
+[![codecov](https://codecov.io/gh/zschumacher/coro-context-manager/branch/main/graph/badge.svg?token=6610H3V6JE)](https://codecov.io/gh/zschumacher/coro-context-manager)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/coro-context-manager)
 
 # coro-context-manager
 *coro-context-manager* is a simple python package that includes an object that can wrap a coroutine to allow it to
