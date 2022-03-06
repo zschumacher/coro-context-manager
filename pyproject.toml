@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "coro-context-manager"
-version = "0.1.1"
+version = "0.1.2"
 description = "A simple object to wrap coroutines to make them awaitable or used via an asyn context manager"
 authors = ["Zach Schumacher <zschu15@gmail.com>"]
 license = "MIT"
@@ -27,7 +27,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = ">=3.7,<=3.10"
+python = ">=3.7,<3.11"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.1"
