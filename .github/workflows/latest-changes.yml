@@ -17,7 +17,7 @@ jobs:
   latest-changes:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           # To allow latest-changes to commit to main
           token: ${{ secrets.ACTIONS_TOKEN }}
