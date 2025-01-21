@@ -14,33 +14,25 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [ '3.8', '3.9', '3.10', '3.11', '3.12' ]
+        python-version: [ '3.8', '3.9', '3.10', '3.11', '3.12', '3.13' ]
 
     steps:
       - name: checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: set up python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
       - name: install poetry
         env:
-          POETRY_VERSION: "1.7.1"
+          POETRY_VERSION: "1.8.5"
         run: |
           curl -sSL https://install.python-poetry.org | python -
           poetry config virtualenvs.create false
 
-      - name: cache poetry.lock dependencies
-        id: cache-poetry-deps
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.pythonLocation }}
-          key: ${{ runner.os }}-${{ env.pythonLocation }}-${{ hashFiles('poetry.lock') }}-test
-
       - name: install dependencies
-        if: steps.cache-poetry-deps.outputs.cache-hit != 'true'
         run: poetry install
 
       - name: test and coverage
