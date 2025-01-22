@@ -90,5 +90,3 @@ nice if there was a consistent pattern everyone was using; this package aims to 
 * [cx_Oracle_async](https://github.com/GoodManWEN/cx_Oracle_async/blob/main/cx_Oracle_async/context.py#L3)
 * [aiomysql](https://github.com/aio-libs/aiomysql/blob/master/aiomysql/utils.py#L30)
 
-## Latest Changes
-

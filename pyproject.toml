@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "coro-context-manager"
-version = "0.2.0"
+version = "0.2.1"
 description = "A simple object to wrap coroutines to make them awaitable or used via an asyn context manager"
 authors = ["Zach Schumacher <zschu15@gmail.com>"]
 license = "MIT"
